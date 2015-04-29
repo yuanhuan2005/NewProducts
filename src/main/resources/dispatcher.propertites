@@ -1,0 +1,62 @@
+#   AWS SQS(Simple Queue Service) settings
+#    	queueAccessKeyId: 
+#    		AWS AccessKeyID of SQS
+#    	queueSecretAccessKey: 
+#			AWS SecretAccessKey of SQS
+#    	requestQueueURL: 
+#			AWS SQS addresses for poll request messages
+#       responseQueueURL: 
+#			AWS SQS addresses for sending response messages
+#       queueMessageCheckDuration: 
+#			The duration in seconds that Dispatcher check task queue
+#			Default: 300
+#    	tmpOutputFilePathInWindows/tmpOutputFilePathInLinux: 
+#        	Directory in different operating systems to store temporary output files. 
+#        	Make sure that these directories are writable by user who runs Dispatcher.
+#        	Default: C:/ in Windows
+#        	Default: /tmp/ in Linux
+queueAccessKeyId=AKIAI57VEFB4FVT7TQNA
+queueSecretAccessKey=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
+requestQueueURL=https://sqs.ap-southeast-1.amazonaws.com/553952466149/dev_pictureBookQueue
+responseQueueURL=https://sqs.ap-southeast-1.amazonaws.com/553952466149/dev_aQueue
+queueMessageCheckDuration=10
+tmpOutputFilePathInWindows=C:/Users/TCL/
+tmpOutputFilePathInLinux=/tmp/
+
+#   AWS S3 settings
+# 		s3AccessKeyId: 
+#			AWS AccessKeyID of S3
+#		s3SecretAccessKey:
+#			AWS SecretAccessKey of S3
+#		s3PresignedUrlExpirationSeconds:
+#			Expiration seconds of s3 presigned url. 
+#           Default: 18000s(5 hours)
+s3AccessKeyId=AKIAI57VEFB4FVT7TQNA
+s3SecretAccessKey=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
+s3PresignedUrlExpirationSeconds=18000
+
+#   Object detection settings
+# 		shellScriptName: 
+#			Object detection shell script file path
+# 		xmlPath: 
+#			Output XML file path
+#       objectDetectionInputWidth:
+#           Object detection input video width after transcoding
+shellScriptName=/home/fausto/tv_shopping/system/codes/object_detection.sh
+xmlPath=/home/fausto/tv_shopping/system/codes/out_all
+objectDetectionVideoWidth=576
+
+
+#   Face detection settings
+# 		faceDetectionProjectRoot: 
+#			work directory for face detection
+# 		faceDetectionKeyFramesPercent: 
+#			key frames percent for face detection
+faceDetectionProjectRoot=//192.168.1.228/Volume_1/face_workspace/
+faceDetectionKeyFramesPercent = 0.01
+
+
+#   Picture Book settings
+# 		workDir: 
+#			work directory for Picture Book
+workDir=C:/TCL_workspace/PictureBook/
